@@ -26,6 +26,7 @@ requirements:
     - auditwheel-emscripten >=0.0.9,<0.1.0
     - cmake >=3.24
     - cython <3.0
+    - loky
     - packaging
     - pydantic >=1.10.2
     - pyodide-cli >=0.2.1,<0.3.0
