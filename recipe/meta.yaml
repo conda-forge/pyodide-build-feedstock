@@ -1,4 +1,4 @@
-{% set version = "0.23.0" %}
+{% set version = "0.23.1" %}
 
 package:
   name: pyodide-build
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pyodide-build/pyodide-build-{{ version }}.tar.gz
-  sha256: fb367045ff3672e139724c99c0203de7597769e5f09bebdd4543e1b96838df82
+  sha256: 9cc0008f2dfa1fe82adf61cf4b90dc5a94fdf45d86ff6bc806c46d007b70ce1f
   patches:
     # this _should_ fail if the version of cmake changes below
     - 0000-no-cmake-from-pip.patch
