@@ -1,4 +1,4 @@
-{% set version = "0.23.3" %}
+{% set version = "0.23.4" %}
 
 package:
   name: pyodide-build
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pyodide-build/pyodide-build-{{ version }}.tar.gz
-  sha256: 7b9a44917bdcc7308d719ec2bfc3b66637cccb5548a3f39714ae0cffe59f3410
+  sha256: fbb23f93af39d563c9fbdf656ae663035a9a4e8f470f589674a76f9aab6441d9
   patches:
     # this _should_ fail if the version of cmake changes below
     - 0000-no-cmake-from-pip.patch
@@ -28,7 +28,7 @@ requirements:
     - cython <3.0
     - loky
     - packaging
-    - pydantic >=1.10.2
+    - pydantic >=1.10.2,<2
     - pyodide-cli >=0.2.1,<0.3.0
     - python >=3.10
     - python-build ==0.7.0
