@@ -1,11 +1,12 @@
---- setup.cfg	2023-02-11 13:22:04.989379640 -0600
-+++ setup.cfg	2023-02-11 13:22:14.693162999 -0600
-@@ -30,7 +30,7 @@
- 	virtualenv
- 	pydantic>=1.10.2
- 	pyodide-cli~=0.2.1
--	cmake>=3.24
-+	# cmake>=3.24
- 	unearth~=0.6
- 	requests
- 	types-requests
+diff --git a/pyodide-build/pyproject.toml b/pyodide-build/pyproject.toml
+index 535d773e..ee277e7a 100644
+--- a/pyodide-build/pyproject.toml
++++ b/pyodide-build/pyproject.toml
+@@ -24,7 +24,6 @@ dependencies = [
+     "virtualenv",
+     "pydantic>=1.10.2,<2",
+     "pyodide-cli~=0.2.1",
+-    "cmake>=3.24",
+     "unearth~=0.6",
+     "requests",
+     "types-requests",
