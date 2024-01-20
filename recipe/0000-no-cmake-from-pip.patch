@@ -1,8 +1,8 @@
 diff --git a/pyodide-build/pyproject.toml b/pyodide-build/pyproject.toml
-index 535d773e..38f87ea2 100644
+index 1d0d4b2b..b064058f 100644
 --- a/pyodide-build/pyproject.toml
 +++ b/pyodide-build/pyproject.toml
-@@ -24,13 +24,12 @@ dependencies = [
+@@ -24,7 +24,6 @@ dependencies = [
      "virtualenv",
      "pydantic>=1.10.2,<2",
      "pyodide-cli~=0.2.1",
@@ -10,10 +10,3 @@ index 535d773e..38f87ea2 100644
      "unearth~=0.6",
      "requests",
      "types-requests",
-     "typer",
-     "auditwheel-emscripten~=0.0.9",
--    "pyodide-lock==0.1.0a1",
-+    "pyodide-lock>=0.1.0a1,<0.2.0",
-     "resolvelib",
-     "rich",
-     "loky",
