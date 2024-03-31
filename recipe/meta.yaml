@@ -29,9 +29,9 @@ requirements:
     - loky
     - packaging
     - pydantic >=1.10.2,<2
-    - pyodide-cli >=0.2.1,<0.3.0
+    - pyodide-cli >=0.2.1,<0.3.dev0
     - python >=3.10
-    - python-build >=1.0.0
+    - python-build >=1.2.0,<1.3.dev0
     - pyodide-lock ==0.1.0a4
     - pyyaml
     - requests
@@ -41,7 +41,7 @@ requirements:
     - tomli
     - typer
     - types-requests
-    - unearth >=0.6,<1.0.0
+    - unearth >=0.6,<1.dev0
     - virtualenv
     - wheel
 
