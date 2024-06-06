@@ -1,44 +1,41 @@
-{% set version = "0.25.0" %}
+{% set version = "0.26.0" %}
 
 package:
   name: pyodide-build
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/pyodide-build/pyodide-build-{{ version }}.tar.gz
-  sha256: 060abf97429a592788393fb9710f4c63b1ff45d14c248f0c710913efe4e70623
+  url: https://pypi.io/packages/source/p/pyodide-build/pyodide_build-{{ version }}.tar.gz
+  sha256: d52805cbde5428bdd56c891d67cf4d097a8a4637859b95e0c6d0ba94b2c6476a
   patches:
     # this _should_ fail if the version of cmake changes below
     - 0000-no-cmake-from-pip.patch
 
 build:
-  noarch: python
-  entry_points:
-    - pyodide-build = pyodide_build.__main__:main
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
+    - hatchling
     - pip
-    - python >=3.10
+    - python >=3.12
   run:
     - auditwheel-emscripten >=0.0.9,<0.1.0
     - cmake >=3.24
-    - cython <3.0
     - loky
     - packaging
-    - pydantic >=1.10.2,<2
+    - pydantic >=2,<3
     - pyodide-cli >=0.2.1,<0.3.0
-    - python >=3.10
+    - python >=3.12
     - python-build >=1.0.0
-    - pyodide-lock ==0.1.0a4
+    - pyodide-lock ==0.1.0a6
     - pyyaml
     - requests
     - resolvelib
     - rich
     - ruamel.yaml
-    - tomli
     - typer
     - types-requests
     - unearth >=0.6,<1.0.0
@@ -46,17 +43,12 @@ requirements:
     - wheel
 
 test:
-  files:
-    - test_pyodide_cli.py
   imports:
     - pyodide_build
   requires:
     - pip
   commands:
     - pip check
-    # TODO: deprecated, but maybe figure out all the env vars needed for this to actually run
-    # - pyodide-build --help
-    - which pyodide-build || where pyodide-build
     - pyodide build-recipes --help
     - pyodide skeleton --help
     - pyodide config --help
