@@ -1,12 +1,14 @@
-diff --git a/pyodide-build/pyproject.toml b/pyodide-build/pyproject.toml
-index 1d0d4b2b..b064058f 100644
---- a/pyodide-build/pyproject.toml
-+++ b/pyodide-build/pyproject.toml
-@@ -24,7 +24,6 @@ dependencies = [
-     "virtualenv",
-     "pydantic>=1.10.2,<2",
-     "pyodide-cli~=0.2.1",
+diff --git a/pyproject.toml b/pyproject.toml
+index 5c32ccb..02cc591 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -19,7 +19,8 @@ dependencies = [
+     "pyodide-lock==0.1.0a6",
+     "auditwheel-emscripten~=0.0.9",
+     "pydantic>=2,<3",
 -    "cmake>=3.24",
-     "unearth~=0.6",
-     "requests",
-     "types-requests",
++    # conda-forge: use real cmake package
++    # "cmake>=3.24",
+     "wheel",
+     "ruamel.yaml",
+     "packaging",
