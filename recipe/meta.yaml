@@ -12,7 +12,7 @@ source:
     - 0000-no-cmake-from-pip.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -24,7 +24,6 @@ requirements:
   run:
     - auditwheel-emscripten >=0.0.9,<0.1.0
     - cmake >=3.24
-    - loky
     - packaging
     - pydantic >=2,<3
     - pyodide-cli >=0.2.1,<0.3.dev0
@@ -37,7 +36,6 @@ requirements:
     - rich
     - ruamel.yaml
     - typer
-    - types-requests
     - unearth >=0.6,<1.dev0
     - virtualenv
     - wheel
@@ -54,7 +52,7 @@ test:
     - pyodide config --help
 
 about:
-  home: https://github.com/pyodide/pyodide
+  home: https://github.com/pyodide/pyodide-build
   summary: Tools for building Pyodide
   license: MPL-2.0
   license_file: LICENSE
