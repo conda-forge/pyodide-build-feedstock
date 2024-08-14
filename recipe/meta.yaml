@@ -46,11 +46,13 @@ test:
     - pyodide_build
   requires:
     - pip
+    - m2-grep  # [win]
   commands:
     - pip check
     - pyodide build-recipes --help
     - pyodide skeleton --help
     - pyodide config --help
+    - python -c "v = __import__('pyodide_build').__version__; print(v); assert v == '{{ version }}'"
 
 about:
   home: https://github.com/pyodide/pyodide-build
