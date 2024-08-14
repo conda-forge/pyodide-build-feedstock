@@ -29,7 +29,7 @@ requirements:
     - pyodide-cli >=0.2.1,<0.3.dev0
     - python >=3.12
     - python-build >=1.2.0,<1.3.dev0
-    - pyodide-lock ==0.1.0a6
+    - pyodide-lock ==0.1.0a7
     - pyyaml
     - requests
     - resolvelib
