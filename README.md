@@ -145,6 +145,4 @@ Feedstock Maintainers
 
 * [@agriyakhetarpal](https://github.com/agriyakhetarpal/)
 * [@bollwyvl](https://github.com/bollwyvl/)
-* [@hoodmane](https://github.com/hoodmane/)
-* [@ryanking13](https://github.com/ryanking13/)
 
