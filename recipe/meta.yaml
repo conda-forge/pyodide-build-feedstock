@@ -1,4 +1,4 @@
-{% set version = "0.29.1" %}
+{% set version = "0.29.2" %}
 
 {% set python_min = python_min | default("3.12") %}
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyodide-build/pyodide_build-{{ version }}.tar.gz
-  sha256: 490a8fb2c33064f7899803e4dfa3fbc34b5bcc166cd0b72c1d121813f329cf5a
+  sha256: 6ffb5271a34890d857d7d53427d426442a44e5863c1ba66d224375be30d2a038
   patches:
     # this _should_ fail if the version of cmake changes below
     - 0000-no-cmake-from-pip.patch
