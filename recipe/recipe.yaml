@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 0.29.3
+  version: "0.30.0"
 
 package:
   name: pyodide-build
@@ -10,10 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyodide-build/pyodide_build-${{ version }}.tar.gz
-  sha256: 7da6e59dbf8d7bce2b98d85417afe742d3d712df77fea415d352f646ed44207e
-  patches:
-    # this _should_ fail if the version of cmake changes below
-    - 0000-no-cmake-from-pip.patch
+  sha256: e39076c343849d48346d030de277b9b10906a7e7bf18531f91405eaa68cfebc1
 
 build:
   number: 0
@@ -28,11 +25,10 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
-    - auditwheel-emscripten >=0.0.9,<0.1.0
-    - cmake >=3.24
+    - auditwheel-emscripten ==0.1.0
     - packaging
     - pydantic >=2,<3
-    - pyodide-cli >=0.2.1,<0.3.dev0
+    - pyodide-cli >=0.3.0
     - python >=${{ python_min }}
     - python-build >=1.2.0,<1.3.dev0
     - pyodide-lock ==0.1.0a7
@@ -40,7 +36,8 @@ requirements:
     - resolvelib
     - rich
     - ruamel.yaml
-    - typer
+    - platformdirs
+    - typer >=0.13
     - unearth >=0.6,<1.dev0
     - virtualenv
     - wheel
@@ -55,6 +52,8 @@ tests:
         - python ${{ python_min }}.*
     script:
       - pyodide build-recipes --help
+      - pyodide xbuildenv --help
+      - pyodide build --help
       - pyodide skeleton --help
       - pyodide config --help
       - python -c "v = __import__('pyodide_build').__version__; print(v); assert v == '${{ version }}'"
