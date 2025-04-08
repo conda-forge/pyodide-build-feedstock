@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: 0.29.3
+  version: "0.30.0"
 
 package:
   name: pyodide-build
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyodide-build/pyodide_build-${{ version }}.tar.gz
-  sha256: 7da6e59dbf8d7bce2b98d85417afe742d3d712df77fea415d352f646ed44207e
+  sha256: e39076c343849d48346d030de277b9b10906a7e7bf18531f91405eaa68cfebc1
   patches:
     # this _should_ fail if the version of cmake changes below
     - 0000-no-cmake-from-pip.patch
