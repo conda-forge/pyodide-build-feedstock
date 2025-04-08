@@ -11,9 +11,6 @@ package:
 source:
   url: https://pypi.org/packages/source/p/pyodide-build/pyodide_build-${{ version }}.tar.gz
   sha256: e39076c343849d48346d030de277b9b10906a7e7bf18531f91405eaa68cfebc1
-  patches:
-    # this _should_ fail if the version of cmake changes below
-    - 0000-no-cmake-from-pip.patch
 
 build:
   number: 0
@@ -29,7 +26,6 @@ requirements:
     - python ${{ python_min }}.*
   run:
     - auditwheel-emscripten >=0.0.9,<0.1.0
-    - cmake >=3.24
     - packaging
     - pydantic >=2,<3
     - pyodide-cli >=0.2.1,<0.3.dev0
