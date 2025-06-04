@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.30.4"
+  version: "0.30.5"
 
 package:
   name: pyodide-build
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyodide-build/pyodide_build-${{ version }}.tar.gz
-  sha256: 0bdecd541714c67350098243f07401cb52d4cf04a210fd5550f4bfe0a53be568
+  sha256: c69599d8a4f80d3411d3e78dec3b3e6d33f2092d375a97b6a8041bb354aba876
 
 build:
   number: 0
