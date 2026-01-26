@@ -66,7 +66,9 @@ about:
   summary: Tools for building Pyodide
   license: MPL-2.0
   license_file: LICENSE
-  homepage: https://github.com/pyodide/pyodide-build
+  homepage: https://pypi.org/project/pyodide-build
+  repository: https://github.com/pyodide/pyodide-build
+  documentation: https://pyodide.org
 
 extra:
   recipe-maintainers:
