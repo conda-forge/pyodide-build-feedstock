@@ -37,12 +37,12 @@ requirements:
     - python >=${{ python_min }}
     - python-build >=1.2.0,<1.3.dev0
     - requests
-    - resolvelib
     - rich
     - ruamel.yaml
-    - unearth >=0.6,<1.dev0
     - virtualenv
     - wheel
+  run_constraints:
+    - unearth >=0.6,<1.dev0
 
 tests:
   - python:
