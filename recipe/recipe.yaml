@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.32.0"
+  version: "0.32.1"
   python_min: "3.12"
   python_check_max: "3.14"
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyodide-build/pyodide_build-${{ version }}.tar.gz
-  sha256: b16ce044ccd87bce6024d736754d93c389053627f599912c5ab6d10800e51060
+  sha256: 67ef1ebb28851f1e67974a995335ee4c4c1f9c7cde0f6dff15055b376e50d174
 
 build:
   number: 0
@@ -37,12 +37,12 @@ requirements:
     - python >=${{ python_min }}
     - python-build >=1.2.0,<1.3.dev0
     - requests
-    - resolvelib
     - rich
     - ruamel.yaml
-    - unearth >=0.6,<1.dev0
     - virtualenv
     - wheel
+  run_constraints:
+    - unearth >=0.6,<1.dev0
 
 tests:
   - python:
