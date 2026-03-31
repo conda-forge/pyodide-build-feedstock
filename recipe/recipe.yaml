@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.33.0"
+  version: "0.34.0"
   python_min: "3.12"
   python_check_max: "3.14"
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyodide-build/pyodide_build-${{ version }}.tar.gz
-  sha256: e2c695942adab40b57a99c285e0b5b6c9579f66d5257dbb81220c35cd28d1eeb
+  sha256: 3fc17a9382678896f17f912cf121679eb195e6f32fa2b877bf6729161a7997a1
 
 build:
   number: 0
@@ -35,7 +35,7 @@ requirements:
     - pyodide-cli >=0.4.1
     - pyodide-lock >=0.1.0,<0.2.dev0
     - python >=${{ python_min }}
-    - python-build >=1.2.0,<1.3.dev0
+    - python-build >=1.4.0,<1.5.dev0
     - requests
     - rich
     - ruamel.yaml
