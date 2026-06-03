@@ -15,7 +15,7 @@ source:
   sha256: 3f8f5a2628e3d69d00264328f64c39c0febcdc7d7de4e2da1b5220832c190f73
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
@@ -68,7 +68,7 @@ about:
   license_file: LICENSE
   homepage: https://pypi.org/project/pyodide-build
   repository: https://github.com/pyodide/pyodide-build
-  documentation: https://pyodide.org
+  documentation: https://pyodide-build.readthedocs.io
 
 extra:
   recipe-maintainers:
