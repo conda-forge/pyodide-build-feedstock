@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.35.0"
+  version: "0.35.1"
   python_min: "3.12"
   python_check_max: "3.14"
 
@@ -12,10 +12,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pyodide-build/pyodide_build-${{ version }}.tar.gz
-  sha256: ffc379777db8064f467b96626bcbe0ab195001e5fee7284c9edc26f80ed17cf2
+  sha256: 15a1555cceda9abc270c1a9cda871f0981922e12c7017eb4b981d15a6dfd406b
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
