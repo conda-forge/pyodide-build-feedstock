@@ -18,7 +18,7 @@ build:
   number: 0
   noarch: python
   script:
-    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check --check-build-dependencies
 
 requirements:
   host:
@@ -28,9 +28,9 @@ requirements:
     - python ${{ python_min }}.*
   run:
     - attrs
-    - auditwheel-emscripten >=0.2.0,<0.3.dev0
+    - auditwheel-emscripten >=0.3.0,<0.4.dev0
     - cattrs
-    - click >=8.0,<8.3.3
+    - click
     - packaging
     - platformdirs
     - pyodide-cli >=0.4.1
@@ -42,10 +42,13 @@ requirements:
     - ruamel.yaml
     - virtualenv
     - wheel
-  run_constraints:
-    - unearth >=0.6,<1.dev0
 
 tests:
+  - package_contents:
+      strict: true
+      site_packages:
+        - pyodide_build/**
+        - pyodide_build-${{ version }}.dist-info/**
   - python:
       imports: pyodide_build
       pip_check: true
