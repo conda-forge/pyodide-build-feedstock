@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.39.0"
+  version: "0.39.1"
   python_min: "3.12"
   python_check_max: "3.14"
 
@@ -11,14 +11,14 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/p/pyodide-build/pyodide_build-${{ version }}.tar.gz
-  sha256: 2003985abd9b7cf7acf5236d9c7aa049973f5bf1cc1b36ca1031e63477ba3ca4
+  url: https://files.pythonhosted.org/packages/source/p/pyodide-build/pyodide_build-${{ version }}.tar.gz
+  sha256: c0882f7bf945c20dd60f7ceb6b186bde419c9fb5a3961533ba37a22ffaac1d6c
 
 build:
   number: 0
   noarch: python
   script:
-    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check --check-build-dependencies
 
 requirements:
   host:
@@ -28,9 +28,9 @@ requirements:
     - python ${{ python_min }}.*
   run:
     - attrs
-    - auditwheel-emscripten >=0.2.0,<0.3.dev0
+    - auditwheel-emscripten >=0.3.0,<0.4.dev0
     - cattrs
-    - click >=8.0,<8.3.3
+    - click
     - packaging
     - platformdirs
     - pyodide-cli >=0.4.1
@@ -42,10 +42,13 @@ requirements:
     - ruamel.yaml
     - virtualenv
     - wheel
-  run_constraints:
-    - unearth >=0.6,<1.dev0
 
 tests:
+  - package_contents:
+      strict: true
+      site_packages:
+        - pyodide_build/**
+        - pyodide_build-${{ version }}.dist-info/**
   - python:
       imports: pyodide_build
       pip_check: true
