@@ -11,7 +11,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/p/pyodide-build/pyodide_build-${{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/p/pyodide-build/pyodide_build-${{ version }}.tar.gz
   sha256: c0882f7bf945c20dd60f7ceb6b186bde419c9fb5a3961533ba37a22ffaac1d6c
 
 build:
