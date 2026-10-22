@@ -36,7 +36,7 @@ requirements:
     - pyodide-cli >=0.4.1
     - pyodide-lock >=0.2.0,<0.3.dev0
     - python >=${{ python_min }}
-    - python-build >=1.4,<1.6,!=1.4.4
+    - python-build >=1.4,<1.7,!=1.4.4
     - requests
     - rich
     - ruamel.yaml
