@@ -30,6 +30,7 @@ requirements:
     - attrs
     - auditwheel-emscripten >=0.3.0,<0.4.dev0
     - cattrs
+    - certifi >=2026.10.19
     - click
     - packaging
     - platformdirs
