@@ -2,9 +2,9 @@
 schema_version: 1
 
 context:
-  version: "0.39.2"
+  version: "0.39.3"
   python_min: "3.12"
-  python_check_max: "3.14"
+  python_check_max: "3.15"
 
 package:
   name: pyodide-build
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/p/pyodide-build/pyodide_build-${{ version }}.tar.gz
-  sha256: 77cc3d679c0bec5ce6798ff941491af320b52c2d522ea50415d9dd8d376c907b
+  sha256: 63eca4721f851a6ce648c1f5a2d93d94650e92ad9e0f8f73aa74a199107d9ef9
 
 build:
   number: 0
@@ -30,6 +30,7 @@ requirements:
     - attrs
     - auditwheel-emscripten >=0.3.0,<0.4.dev0
     - cattrs
+    - certifi >=2026.10.19
     - click
     - packaging
     - platformdirs
