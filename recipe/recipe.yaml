@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.39.3"
+  version: "0.39.4"
   python_min: "3.12"
   python_check_max: "3.15"
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/p/pyodide-build/pyodide_build-${{ version }}.tar.gz
-  sha256: 63eca4721f851a6ce648c1f5a2d93d94650e92ad9e0f8f73aa74a199107d9ef9
+  sha256: 9e1b75a8bce530d40d571759afd9b00b9bb3a85d9cd420f02973d4e6d48496a3
 
 build:
   number: 0
